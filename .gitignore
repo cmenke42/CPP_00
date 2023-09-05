@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+#do not push files wihtout extension but still include folders
+*
+!*/
+!*.cpp
+!*.hpp
+!Makefile
+!Dockerfile
