@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:49 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/05 21:23:05 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/06 15:46:51 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ class PhoneBook
 		PhoneBook(/* args */);
 		~PhoneBook();
 	private:
+		Contact contacts[8];
+		// int		contact_count;
 		/* data */
 };
 
-PhoneBook::PhoneBook(/* args */)
+PhoneBook::PhoneBook(void) : contacts()
 {
 }
 

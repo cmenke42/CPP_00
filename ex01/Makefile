@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/05 20:34:36 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/06 15:36:13 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME := phone_book
 
 OBJDIR := objects
 
-SRCS := megaphone.cpp
+SRCS := Contact.cpp \
+		PhoneBook.cpp \
+		main.cpp
 
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
