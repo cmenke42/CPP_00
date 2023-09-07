@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/06 15:36:13 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/07 22:06:16 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,10 @@ SRCS := Contact.cpp \
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
 #Production flags
-CFLAGS := -Wall -Wextra -Werror -std=c++98
+# CFLAGS := -Wall -Wextra -Werror -std=c++98
 
 #Development flags
+CFLAGS := -Wall -Wextra -std=c++98
 # CFLAGS += -g -O0
 # CFLAGS += -fsanitize=thread
 # CFLAGS += -fsanitize=address
