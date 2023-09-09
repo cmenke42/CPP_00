@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:41 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 19:34:20 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/09 21:33:19 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Contact::Contact()
 {
-	this->_initialize_setters();
 	return ;
 }
 
@@ -74,15 +73,6 @@ void	Contact::set_phone_number(std::string& phone_number)
 void	Contact::set_darkest_secret(std::string& darkest_secret)
 {
 	this->_darkest_secret = darkest_secret;
-}
-
-void	Contact::_initialize_setters(void)
-{
-	this->setters[0] = &Contact::set_first_name;
-	this->setters[1] = &Contact::set_last_name;
-	this->setters[2] = &Contact::set_nickname;
-	this->setters[3] = &Contact::set_phone_number;
-	this->setters[4] = &Contact::set_darkest_secret;
 }
 
 // Getters

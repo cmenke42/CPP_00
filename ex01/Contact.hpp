@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:43 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 19:34:33 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/09 21:33:08 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ class Contact
 		std::string	_nickname;
 		std::string	_phone_number;
 		std::string	_darkest_secret;
-		void		_initialize_setters(void);
 };
 
 #endif //CONTACT_HPP
