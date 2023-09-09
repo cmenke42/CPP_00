@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:58:57 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/05 21:19:25 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/08 20:01:00 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-//using a reference to string. reference cant be changed.
 void	print_string_in_uppercase(const std::string &string)
 {
 	size_t	start;
