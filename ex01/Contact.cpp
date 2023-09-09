@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:41 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 19:19:28 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/09 19:34:20 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,14 @@ void (Contact::*Contact::setters[5])(std::string&) = {
     &Contact::set_nickname,
     &Contact::set_phone_number,
     &Contact::set_darkest_secret
+};
+
+std::string (Contact::*Contact::getters[5])(void) = {
+	&Contact::get_first_name,
+	&Contact::get_last_name,
+	&Contact::get_nickname,
+	&Contact::get_phone_number,
+	&Contact::get_darkest_secret
 };
 
 int			Contact::field_count = 5;

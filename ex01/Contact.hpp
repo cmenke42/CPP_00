@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:43 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 19:14:18 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/09 19:34:33 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Contact
 		static std::string	fields[5];
 		static int			field_count;
 		static void			(Contact::*setters[5])(std::string&);
+		static std::string	(Contact::*getters[5])(void);
 
 		void		set_first_name(std::string& first_name);
 		void		set_last_name(std::string& last_name);
