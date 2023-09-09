@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/05 21:04:08 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/09 21:31:27 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS := megaphone.cpp
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
 #Production flags
-# CFLAGS := -Wall -Wextra -Werror -std=c++98
+CFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Development flags
 # CFLAGS += -g -O0
