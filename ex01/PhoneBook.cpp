@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:46 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 21:28:02 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/10 17:15:07 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 std::string	trimm_string(std::string& user_input);
 bool		is_input_valid(const std::string& user_input);
-void	display_contact_list_element(Contact& contact, int const index);
-void		display_complete_contact(Contact& contact);
+void		display_contact_list_element(const Contact& contact, const int index);
+void		display_complete_contact(const Contact& contact);
 
 PhoneBook::PhoneBook(void) : _contact_count(0), _contact_index(0)
 {
@@ -86,7 +86,7 @@ std::string	trimm_string(std::string& user_input)
 	return (trimmed_string);
 }
 
-bool	PhoneBook::display_entry_overview(void)
+bool	PhoneBook::display_entry_overview(void) const
 {
 	int				i;
 	std::string		user_input;
@@ -105,7 +105,7 @@ bool	PhoneBook::display_entry_overview(void)
 	return (true);
 }
 
-void	display_contact_list_element(Contact& contact, int const index)
+void	display_contact_list_element(const Contact& contact, const int index)
 {
 	std::string	contact_detail;
 	int			i;
@@ -128,7 +128,7 @@ void	display_contact_list_element(Contact& contact, int const index)
 	std::cout << std::endl;
 }
 
-bool	PhoneBook::display_entry(int const index)
+bool	PhoneBook::display_entry(const int index) const
 {
 	if (index < 0 || index > this->_contact_count - 1)
 	{
@@ -140,7 +140,7 @@ bool	PhoneBook::display_entry(int const index)
 	return (true);
 }
 
-void	display_complete_contact(Contact& contact)
+void	display_complete_contact(const Contact& contact)
 {
 	int	i;
 	int	padding;

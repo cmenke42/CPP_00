@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:49 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 21:01:14 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/10 17:12:11 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class PhoneBook
 		~PhoneBook(void);
 
 		void	add_contact(void);
-		bool	display_entry_overview(void);
-		bool	display_entry(int const index);
+		bool	display_entry_overview(void) const;
+		bool	display_entry(const int index) const;
 	private:
 		Contact	_contacts[8];
 		int		_contact_count;

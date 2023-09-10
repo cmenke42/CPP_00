@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:29:56 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 21:25:15 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/10 16:59:32 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <string>
 
-void	display_one_entry(PhoneBook& crappy_phonebook);
+void	display_one_contact(PhoneBook& crappy_phonebook);
 
 int	main(void)
 {
@@ -33,7 +33,7 @@ int	main(void)
 		{
 			if (!crappy_phonebook.display_entry_overview())
 				continue ;
-			display_one_entry(crappy_phonebook);
+			display_one_contact(crappy_phonebook);
 		}
 		else
 			std::cerr << RED "Error: Invalid command entered" RESET << std::endl;
@@ -41,7 +41,7 @@ int	main(void)
 	return (0);
 }
 
-void	display_one_entry(PhoneBook& crappy_phonebook)
+void	display_one_contact(PhoneBook& crappy_phonebook)
 {
 	std::string			input;
 	int					index;

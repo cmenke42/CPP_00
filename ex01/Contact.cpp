@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:41 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/09 21:33:19 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/10 17:03:55 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void (Contact::*Contact::setters[5])(std::string&) = {
     &Contact::set_darkest_secret
 };
 
-std::string (Contact::*Contact::getters[5])(void) = {
+std::string (Contact::*Contact::getters[5])(void) const = {
 	&Contact::get_first_name,
 	&Contact::get_last_name,
 	&Contact::get_nickname,
@@ -76,27 +76,27 @@ void	Contact::set_darkest_secret(std::string& darkest_secret)
 }
 
 // Getters
-std::string	Contact::get_first_name(void)
+std::string	Contact::get_first_name(void) const
 {
 	return (this->_first_name);
 }
 
-std::string	Contact::get_last_name(void)
+std::string	Contact::get_last_name(void) const
 {
 	return (this->_last_name);
 }
 
-std::string	Contact::get_nickname(void)
+std::string	Contact::get_nickname(void) const
 {
 	return (this->_nickname);
 }
 
-std::string Contact::get_phone_number(void)
+std::string Contact::get_phone_number(void) const
 {
 	return (this->_phone_number);
 }
 
-std::string	Contact::get_darkest_secret(void)
+std::string	Contact::get_darkest_secret(void) const
 {
 	return (this->_darkest_secret);
 }
