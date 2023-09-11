@@ -43,3 +43,5 @@
 !Dockerfile
 # Unignore the "test" folder and its contents
 !/*/test/*
+
+!19920104_091532.log
