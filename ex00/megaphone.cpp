@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 18:58:57 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/10 23:26:52 by cmenke           ###   ########.fr       */
+/*   Created: 2023/09/11 01:01:28 by cmenke            #+#    #+#             */
+/*   Updated: 2023/09/11 01:01:34 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <cstring>
 #include <cctype>
 
-void	print_string_in_uppercase(const std::string &string);
+void	print_string_in_uppercase(const std::string& string);
 
 int	main(int argc, char **argv)
 {
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-void	print_string_in_uppercase(const std::string &string)
+void	print_string_in_uppercase(const std::string& string)
 {
 	size_t	start;
 	size_t	end;
