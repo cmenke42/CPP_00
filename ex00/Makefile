@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/09 21:31:27 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/11 15:19:18 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ SRCS := megaphone.cpp
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
 #Production flags
-CFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Development flags
-# CFLAGS += -g -O0
-# CFLAGS += -fsanitize=thread
-# CFLAGS += -fsanitize=address
+# CPPFLAGS += -g -O0
+# CPPFLAGS += -fsanitize=thread
+# CPPFLAGS += -fsanitize=address
 
 CC := c++
 
@@ -33,10 +33,10 @@ RM := rm -f
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
+	${CC} ${CPPFLAGS} ${OBJS} -o ${NAME}
 
 ${OBJDIR}/%.o: %.cpp | ${OBJDIR}
-	${CC} ${CFLAGS} -c $< -o $@
+	${CC} ${CPPFLAGS} -c $< -o $@
 
 ${OBJDIR}:
 	mkdir -p ${OBJDIR}

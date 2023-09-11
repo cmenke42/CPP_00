@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/10 23:04:29 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/11 16:08:31 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,13 @@ SRCS := Account.cpp \
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
 #Production flags
-CFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Development flags
-# CFLAGS := -Wall -Wextra -std=c++98
-# CFLAGS += -g -O0
-# CFLAGS += -fsanitize=thread
-# CFLAGS += -fsanitize=address
+# CPPFLAGS := -Wall -Wextra -std=c++98
+# CPPFLAGS += -g -O0
+# CPPFLAGS += -fsanitize=thread
+# CPPFLAGS += -fsanitize=address
 
 CC := c++
 
@@ -35,10 +35,10 @@ RM := rm -f
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
+	${CC} ${CPPFLAGS} ${OBJS} -o ${NAME}
 
 ${OBJDIR}/%.o: %.cpp | ${OBJDIR}
-	${CC} ${CFLAGS} -c $< -o $@
+	${CC} ${CPPFLAGS} -c $< -o $@
 
 ${OBJDIR}:
 	mkdir -p ${OBJDIR}

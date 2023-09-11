@@ -21,8 +21,8 @@ file3_test_result="$SCRIPT_DIR/test_result.txt"
 
 # Start a subshell
 (
-    exec 2>&1 > >(tee -a "$file2")
-    # "$EXECUTABLE"
+    exec 2>&1 > >(tee "$file2")
+    "$EXECUTABLE"
 )
 # Back to the main shell
 
