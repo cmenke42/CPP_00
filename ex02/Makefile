@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/11 16:08:31 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/16 18:07:33 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRCS := Account.cpp \
 		tests.cpp
 
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
+
+HEADER := Account.hpp
 
 #Production flags
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
@@ -37,7 +39,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${CC} ${CPPFLAGS} ${OBJS} -o ${NAME}
 
-${OBJDIR}/%.o: %.cpp | ${OBJDIR}
+${OBJDIR}/%.o: %.cpp ${HEADER} | ${OBJDIR}
 	${CC} ${CPPFLAGS} -c $< -o $@
 
 ${OBJDIR}:
