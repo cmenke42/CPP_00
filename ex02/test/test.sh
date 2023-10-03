@@ -56,3 +56,4 @@ fi
 # Clean up
 rm "$file1_timestamp_removed"
 rm "$file2_timestamp_removed"
+rm "$file2"

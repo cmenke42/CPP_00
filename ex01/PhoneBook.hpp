@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:49 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/10 17:12:11 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/03 01:31:36 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@
 # include "Contact.hpp"
 # include <iomanip>
 # include <sstream>
-
-
-// define some color macros
-#define RESET		"\033[0m"
-#define RED			"\033[31m"
 
 class PhoneBook
 {

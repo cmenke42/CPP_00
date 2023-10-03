@@ -6,12 +6,12 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 01:01:28 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/11 01:01:34 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/03 01:21:51 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cstring>
+#include <string>
 #include <cctype>
 
 void	print_string_in_uppercase(const std::string& string);

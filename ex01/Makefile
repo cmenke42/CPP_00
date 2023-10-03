@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/16 18:07:25 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/09 21:31:10 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,17 +20,14 @@ SRCS := Contact.cpp \
 
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
-HEADER := Contact.hpp \
-		PhoneBook.hpp
-
 #Production flags
-CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
+CFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Development flags
-# CPPFLAGS := -Wall -Wextra -std=c++98
-# CPPFLAGS += -g -O0
-# CPPFLAGS += -fsanitize=thread
-# CPPFLAGS += -fsanitize=address
+# CFLAGS := -Wall -Wextra -std=c++98
+# CFLAGS += -g -O0
+# CFLAGS += -fsanitize=thread
+# CFLAGS += -fsanitize=address
 
 CC := c++
 
@@ -39,10 +36,10 @@ RM := rm -f
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	${CC} ${CPPFLAGS} ${OBJS} -o ${NAME}
+	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
-${OBJDIR}/%.o: %.cpp ${HEADER} | ${OBJDIR}
-	${CC} ${CPPFLAGS} -c $< -o $@
+${OBJDIR}/%.o: %.cpp | ${OBJDIR}
+	${CC} ${CFLAGS} -c $< -o $@
 
 ${OBJDIR}:
 	mkdir -p ${OBJDIR}

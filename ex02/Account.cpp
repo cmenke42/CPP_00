@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:43:10 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/11 16:18:35 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/03 01:58:36 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,22 +47,6 @@ void	Account::displayAccountsInfos( void )
 	std::cout << "total:" << Account::getTotalAmount() << ";";
 	std::cout << "deposits:" << Account::getNbDeposits() << ";";
 	std::cout << "withdrawals:" << Account::getNbWithdrawals() << std::endl;
-}
-
-void	Account::_displayTimestamp( void )
-{
-	std::time_t current_time;
-	char		timestamp[20];
-
-	current_time = std::time(NULL);
-	if (current_time == (std::time_t)(-1))
-		std::cerr << "[" "Error: Couldn't get the time object" "] ";
-	else
-	{
-		std::strftime(timestamp, sizeof(timestamp),
-			 "[%Y%m%d_%H%M%S]", std::localtime(&current_time));
-		std::cout << timestamp << " ";
-	}
 }
 
 //Constructor and Destructor
@@ -134,4 +118,20 @@ void	Account::displayStatus( void ) const
 	std::cout << "amount:" << this->_amount << ";";
 	std::cout << "deposits:" << this->_nbDeposits << ";";
 	std::cout << "withdrawals:" << this->_nbWithdrawals << std::endl;
+}
+
+void	Account::_displayTimestamp( void )
+{
+	std::time_t current_time;
+	char		timestamp[20];
+
+	current_time = std::time(NULL);
+	if (current_time == (std::time_t)(-1))
+		std::cerr << "[" "Error: Couldn't get the time object" "] ";
+	else
+	{
+		std::strftime(timestamp, sizeof(timestamp),
+			 "[%Y%m%d_%H%M%S]", std::localtime(&current_time));
+		std::cout << timestamp << " ";
+	}
 }

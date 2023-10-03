@@ -31,11 +31,21 @@ echo -e "\n${YELLOW}Comparing output with expected:${RESET}"
 if diff "$file1" "$file2" >/dev/null; then
     echo -e "${GREEN}Success${RESET}"
 else
-{
-    echo -e "${RED}Fail${RESET}"
-    awk 'NR==FNR{a[NR]=$0;next} {if(a[FNR]!=$0) print "Difference at line",FNR,"\nFile1:",a[FNR],"\nFile2:",$0}' $file1 $file2
-
-}
+    {
+        echo -e "${RED}Fail${RESET}"
+        awk -v yellow="$YELLOW" -v green="$GREEN" -v red="$RED" -v reset="$RESET" '
+            NR==FNR {
+                a[NR]=$0
+                next
+            } {
+                if (a[FNR] != $0) {
+                    print yellow "Difference at line", reset, FNR
+                    print green "Correct:", reset, a[FNR]
+                    print red "Wrong  :", reset, $0
+                }
+            }
+        ' "$file1" "$file2"
+    }
 fi
 
 # Clean up

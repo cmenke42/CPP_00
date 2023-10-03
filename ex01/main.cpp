@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:29:56 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/10 16:59:32 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/03 01:40:38 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(void)
 			display_one_contact(crappy_phonebook);
 		}
 		else
-			std::cerr << RED "Error: Invalid command entered" RESET << std::endl;
+			std::cerr << "Error: Invalid command entered" << std::endl;
 	}
 	return (0);
 }
@@ -59,8 +59,8 @@ void	display_one_contact(PhoneBook& crappy_phonebook)
 				return ;
 		}
 		else
-			std::cerr << RED "Error: Invalid index entered" RESET << std::endl;
+			std::cerr << "Error: Invalid index entered" << std::endl;
 		i++;
 	}
-	std::cerr << RED "Error: Too many invalid indexes entered" RESET << std::endl;
+	std::cerr << "Error: Too many invalid indexes entered" << std::endl;
 }

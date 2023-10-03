@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:46 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/10 17:15:07 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/03 01:42:19 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	PhoneBook::add_contact(void)
 		{
 			if (error_count++ == 2)
 			{
-				std::cerr << RED "Error: Too many invalid inputs" RESET << std::endl;
+				std::cerr << "Error: Too many invalid inputs" << std::endl;
 				return ;
 			}
 			continue ;
@@ -58,17 +58,6 @@ void	PhoneBook::add_contact(void)
 		this->_contact_index++;
 	else
 		this->_contact_index = 0;
-}
-
-bool	is_input_valid(const std::string& user_input)
-{
-
-	if (user_input.length() == 0 || user_input.find_first_not_of(" \t") == std::string::npos)
-	{
-		std::cerr << RED "Error: Input cannot be empty" RESET << std::endl;
-		return (false);
-	}
-	return (true);
 }
 
 std::string	trimm_string(std::string& user_input)
@@ -86,14 +75,25 @@ std::string	trimm_string(std::string& user_input)
 	return (trimmed_string);
 }
 
+bool	is_input_valid(const std::string& user_input)
+{
+
+	if (user_input.length() == 0 || user_input.find_first_not_of(" \t") == std::string::npos)
+	{
+		std::cerr << "Error: Input cannot be empty" << std::endl;
+		return (false);
+	}
+	return (true);
+}
+
 bool	PhoneBook::display_entry_overview(void) const
 {
-	int				i;
 	std::string		user_input;
+	int				i;
 
 	if (this->_contact_count == 0)
 	{
-		std::cout << RED "Error: No contacts to display" RESET << std::endl;
+		std::cout << "Error: No contacts to display" << std::endl;
 		return (false);
 	}
 	i = 0;
@@ -119,10 +119,10 @@ void	display_contact_list_element(const Contact& contact, const int index)
 		if (contact_detail.length() > 10)
 		{
 			contact_detail[9] = '.';
-			contact_detail.resize(10);
+			contact_detail[10] = 0;
 		}
 		std::cout << std::setw(10) << std::right << std::setfill(' ');
-		std::cout << contact_detail << "|";
+		std::cout << contact_detail.c_str() << "|";
 		i++;
 	}
 	std::cout << std::endl;
@@ -132,8 +132,8 @@ bool	PhoneBook::display_entry(const int index) const
 {
 	if (index < 0 || index > this->_contact_count - 1)
 	{
-		std::cerr << RED "Error: Invalid index entered" << std::endl;
-		std::cerr << "Range is: 0 till " << this->_contact_count - 1 << RESET << std::endl;
+		std::cerr << "Error: Invalid index entered" << std::endl;
+		std::cerr << "Range is: 0 till " << this->_contact_count - 1 << std::endl;
 		return (false);
 	}
 	display_complete_contact(this->_contacts[index]);
