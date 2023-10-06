@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:43:10 by cmenke            #+#    #+#             */
-/*   Updated: 2023/10/03 01:58:36 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/06 23:10:50 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	Account::displayAccountsInfos( void )
 
 //Constructor and Destructor
 Account::Account( int initial_deposit)
-		: _accountIndex(Account::_nbAccounts), _amount(initial_deposit)
+		: _accountIndex(Account::_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0)
 {
 	Account::_nbAccounts++;
 	Account::_totalAmount += this->_amount;

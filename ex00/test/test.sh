@@ -5,10 +5,14 @@ YELLOW='\033[0;33m'
 RED='\033[0;31m'
 RESET='\033[0m'
 
-MEGAPHONE_EXECUTABLE="../megaphone"
+# Determine the script's directory
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-file1="expected.txt"
-file2="output.txt"
+# Set the path to the executable
+MEGAPHONE_EXECUTABLE="$SCRIPT_DIR/../megaphone"
+
+file1="$SCRIPT_DIR/expected.txt"
+file2="$SCRIPT_DIR/output.txt"
 
 # Create a subshell
 (

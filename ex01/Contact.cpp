@@ -6,20 +6,19 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:41 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/10 17:03:55 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/06 23:19:50 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 Contact::Contact()
+		: _first_name(""), _last_name(""), _nickname(""), _phone_number(""), _darkest_secret("")
 {
-	return ;
 }
 
 Contact::~Contact()
 {
-	return ;
 }
 
 // Static variables

@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/16 18:07:33 by cmenke           ###   ########.fr        #
+#    Updated: 2023/10/06 23:08:04 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,9 @@ CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
 # CPPFLAGS := -Wall -Wextra -std=c++98
 # CPPFLAGS += -g -O0
 # CPPFLAGS += -fsanitize=thread
-# CPPFLAGS += -fsanitize=address
+CPPFLAGS += -fsanitize=address
+CPPFLAGS += -fsanitize=undefined
+
 
 CC := c++
 

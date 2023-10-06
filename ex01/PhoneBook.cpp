@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:19:46 by cmenke            #+#    #+#             */
-/*   Updated: 2023/10/03 01:42:19 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/06 23:20:07 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ void		display_complete_contact(const Contact& contact);
 
 PhoneBook::PhoneBook(void) : _contact_count(0), _contact_index(0)
 {
-	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	return ;
 }
 
 void	PhoneBook::add_contact(void)
