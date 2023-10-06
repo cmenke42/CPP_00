@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 01:01:28 by cmenke            #+#    #+#             */
-/*   Updated: 2023/10/03 01:21:51 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/06 22:55:02 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 		while (*(++argv))
 		{
 			print_string_in_uppercase(*argv);
-			if (*(argv + 1) && **(argv + 1))
+			if (*(argv + 1))
 				std::cout << " ";
 		}
 	}
